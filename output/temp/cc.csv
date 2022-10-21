@@ -1,0 +1,6 @@
+"Problem","Package","File","Priority","Line","Description","Rule set","Rule"
+"1","org.jfree.chart","/home/loic/Téléchargements/jfreechart/src/main/java/org/jfree/chart/ChartHints.java","3","48","The class 'ChartHints' has a total cyclomatic complexity of 1 (highest 1).","Design","CyclomaticComplexity"
+"2","org.jfree.chart","/home/loic/Téléchargements/jfreechart/src/main/java/org/jfree/chart/ChartHints.java","3","50","The constructor 'ChartHints()' has a cyclomatic complexity of 1.","Design","CyclomaticComplexity"
+"3","org.jfree.chart","/home/loic/Téléchargements/jfreechart/src/main/java/org/jfree/chart/ChartHints.java","3","70","The class 'Key' has a total cyclomatic complexity of 5 (highest 4).","Design","CyclomaticComplexity"
+"4","org.jfree.chart","/home/loic/Téléchargements/jfreechart/src/main/java/org/jfree/chart/ChartHints.java","3","77","The constructor 'Key(int)' has a cyclomatic complexity of 1.","Design","CyclomaticComplexity"
+"5","org.jfree.chart","/home/loic/Téléchargements/jfreechart/src/main/java/org/jfree/chart/ChartHints.java","3","90","The method 'isCompatibleValue(Object)' has a cyclomatic complexity of 4.","Design","CyclomaticComplexity"

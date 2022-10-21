@@ -1,0 +1,14 @@
+Q1 : Le niveau de documentation des classes est-il approprié par rapport à leur complexité ?
+        Complexité Cyclomatique && densite de commentaire (ncloc/nvloc) :
+Q2 : La conception est-elle bien modulaire ?
+        Coupling Between Objects && God Class && nvloc
+Q3 : Le code est-il mature ?
+        date du premier commit && date du dernier commit && nombre de commits
+Q4 : Le code peut-il être testé bien automatiquement ?
+        Coupling Between Objects && Ratio taille code / taille test (nvloc code/test)
+
+
+Timestamp du premier  commit :
+    git log --reverse --date="format:%s" --format="format:%ad" | head -n 1
+Timestamp du dernier commit :
+    git log --date="format:%s" --format="format:%ad" | head -n 1 
