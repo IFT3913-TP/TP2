@@ -10,12 +10,12 @@ if sys.platform == "linux":
                 if file.endswith(".java"):
                     numberOfFiles+=1
                     filePath = os.path.join(path, file)
-                    cc = SingleClassMesure.highCC(filePath)
+                    highCC = SingleClassMesure.highCC(filePath)
                     nvloc = SingleClassMesure.computenvloc(filePath)
                     cloc = SingleClassMesure.computecloc(filePath)
                     highCBO = SingleClassMesure.highCBO(filePath)
                     GODClass = SingleClassMesure.isGODClass(filePath)
-                    print(cc)
+                    print(highCC)
                     print(nvloc)
                     print(cloc)
                     print(highCBO)

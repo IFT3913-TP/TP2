@@ -3,6 +3,7 @@ import subprocess
 import csv
 import re
 
+""" 
 def computeCyclomatic(filePath):
     outputFile = "output/temp/cc.csv"
     process = subprocess.run([
@@ -27,7 +28,7 @@ def computeCyclomatic(filePath):
                         return complexity
                     else:
                         print("Error when computing cyclomatic complexity", file=sys.stderr)
-                    break
+                    break """
 
 def computenvloc(filePath):
     process = subprocess.Popen([
