@@ -19,6 +19,9 @@ Q1
 Pour mesurer la complexité du code nous avons décidé d’utiliser la complexité cyclomatique. Une très bonne complexité se retrouverait entre 1 et 10, une complexité moyenne se retrouverait entre 11 et 20, une complexité haute 21-50 et finalement une complexité très haute se retrouverait a 50 et plus
 Pour mesurer la densité de commentaires nous utilisons le ratio NCLOC/NVLOC
 
+
+
+
 Q2 La conception est-elle bien modulaire ?
 Coupling between objects:Nous avons décidé d'utiliser la métrique CBO (Coupling between objects) qui compte le nombre de classes couplées à une classe particulière. Avec cette métrique nous pourrons évaluer la modularité car un couplage excessif empêche la réutilisation. Nous déterminons que le seuil pour une valeur de CBO serait de 5 
 God Class:Nous allons analyser les god class car ceux ci en font trop et nuisent à la réutilisation et à la modularité du code.
@@ -26,6 +29,21 @@ God Class:Nous allons analyser les god class car ceux ci en font trop et nuisent
 
 Q3 Le code est-il mature ?
 Pour la maturité du code nous allons déterminer l'âge du code a partir de la date du premier commit, la date du dernier commit ainsi que du nombre de commits car  signifie que le code traversé une période très longue et ininterrompue de développement et de maintenance constants.
+
+Si (DateDernierCommit - DatePremierCommit) /30)  donne une valeur de 18 et plus
+ && 
+Si ( (DateDernierCommit - DatePremierCommit) /30) / NombreDeCommit ) donne une valeur plus grande que 1 nous considérerons que le code est mature alors on repondrait OUI 
+
+
+
+
+
+
+
+
+
+
+
 
 
 Le code peut-il être testé bien automatiquement ?
