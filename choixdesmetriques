@@ -21,10 +21,13 @@ Pour mesurer la densité de commentaires nous utilisons le ratio NCLOC/NVLOC
 
 
 
-
 Q2 La conception est-elle bien modulaire ?
-Coupling between objects:Nous avons décidé d'utiliser la métrique CBO (Coupling between objects) qui compte le nombre de classes couplées à une classe particulière. Avec cette métrique nous pourrons évaluer la modularité car un couplage excessif empêche la réutilisation. Nous déterminons que le seuil pour une valeur de CBO serait de 5 
+Coupling between objects:Nous avons décidé d'utiliser la métrique CBO (Coupling between objects) qui compte le nombre de classes couplées à une classe particulière. Avec cette métrique nous pourrons évaluer la modularité car un couplage excessif empêche la réutilisation.
+Le seuil du CBO se retrouve <= 5
 God Class:Nous allons analyser les god class car ceux ci en font trop et nuisent à la réutilisation et à la modularité du code.
+
+Si la valeur de CBO <=5 && ((GodClass / NombreDeClasses) * 100 ) <=5 la conception serait modulaire et nous répondrons OUI 
+
 
 
 Q3 Le code est-il mature ?
