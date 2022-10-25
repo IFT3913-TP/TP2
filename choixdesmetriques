@@ -19,7 +19,7 @@ Q1
 Pour mesurer la complexité du code nous avons décidé d’utiliser la complexité cyclomatique. Une très bonne complexité se retrouverait entre 1 et 10, une complexité moyenne se retrouverait entre 11 et 20, une complexité haute 21-50 et finalement une complexité très haute se retrouverait a 50 et plus
 Pour mesurer la densité de commentaires nous utilisons le ratio NCLOC/NVLOC
 
-Si la complexité cyclomatique <= 20 && NCLOC/NVLOC 
+Si la complexité cyclomatique <= 20 && NCLOC/NVLOC > 15% nous répondons OUI 
 
 
 
@@ -51,4 +51,6 @@ Q4 Le code peut-il être testé bien automatiquement ?
 Nous calculons le CBO  Une valeur comprise entre 1 et 5 est bonne, car elle indique que la classe est faiblement couplée.
 Un chiffre supérieur à cette valeur peut indiquer que la classe est trop étroitement couplée aux autres classes du modèle, ce qui compliquerait les tests et les modifications, et limiterait les possibilités de réutilisation.
 
-Si CBO <= 5 nous répondons OUI 
+Si CBO <= 5 
+&& 
+(NVLOC code / NVLOC test ) * 100 >= 90% && <= 95% nous répondons OUI 
