@@ -19,7 +19,7 @@ Q1
 Pour mesurer la complexité du code nous avons décidé d’utiliser la complexité cyclomatique. Une très bonne complexité se retrouverait entre 1 et 10, une complexité moyenne se retrouverait entre 11 et 20, une complexité haute 21-50 et finalement une complexité très haute se retrouverait a 50 et plus
 Pour mesurer la densité de commentaires nous utilisons le ratio NCLOC/NVLOC
 
-Si la complexité cyclomatique <= 20 && NCLOC/NVLOC > 15% nous répondons OUI 
+Pour les classes dont la complexité cyclomatique est > 20, on vérifie que la densité de commentaire soit supérieure à 15%. Si le nombre de classes qui ne vérifie pas cette relation est supérieur à 10% du nombre total de classes alors la réponse à la question est NON
 
 
 
@@ -28,22 +28,14 @@ Coupling between objects:Nous avons décidé d'utiliser la métrique CBO (Coupli
 Le seuil du CBO se retrouve <= 5
 God Class:Nous allons analyser les god class car ceux ci en font trop et nuisent à la réutilisation et à la modularité du code.
 
-Si la valeur de CBO <=5 && ((GodClass / NombreDeClasses) * 100 ) <=5 la conception serait modulaire et nous répondrons OUI 
+La conception est modulaire si les classes avec un CBO>5 représentent moins de 20% du total des classes et si les God classes représentent moins de 10% du total des classes
 
 
 
 Q3 Le code est-il mature ?
 Pour la maturité du code nous allons déterminer l'âge du code a partir de la date du premier commit, la date du dernier commit ainsi que du nombre de commits car  signifie que le code traversé une période très longue et ininterrompue de développement et de maintenance constants.
 
-Si (DateDernierCommit - DatePremierCommit) /30)  donne une valeur de 18 et plus
- && 
-Si ( (DateDernierCommit - DatePremierCommit) /30) / NombreDeCommit ) donne une valeur plus grande que 1 nous considérerons que le code est mature alors on repondrait OUI 
-
-
-
-
-
-
+Si il y a en moyenne un commit par semaine et que le projet a au moins 1 an d'existence alors le code est mature
 
 
 Q4 Le code peut-il être testé bien automatiquement ?
@@ -51,6 +43,4 @@ Q4 Le code peut-il être testé bien automatiquement ?
 Nous calculons le CBO  Une valeur comprise entre 1 et 5 est bonne, car elle indique que la classe est faiblement couplée.
 Un chiffre supérieur à cette valeur peut indiquer que la classe est trop étroitement couplée aux autres classes du modèle, ce qui compliquerait les tests et les modifications, et limiterait les possibilités de réutilisation.
 
-Si CBO <= 5 
-&& 
-(NVLOC code / NVLOC test ) * 100 >= 90% && <= 95% nous répondons OUI 
+Si CBO <= 5 pour 90% des classes et si le ratio (NVLOC test / NVLOC code ) est supérieur à 80% alors la réponse est OUI
