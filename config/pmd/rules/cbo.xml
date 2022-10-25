@@ -11,7 +11,7 @@
  <!-- Your rules will come here -->
     <rule ref="category/java/design.xml/CouplingBetweenObjects">
         <properties>
-            <property name="threshold" value="1" />
+            <property name="threshold" value="5" />
         </properties>
     </rule>
     

@@ -23,9 +23,13 @@ def computeMetrics(DirectoryPath):
             reader = csv.DictReader(csvfile, delimiter=',')
             for row in reader:
                 if row['File'] in result_dict:
-                    result_dict[row['File']] = result_dict[row['File']] + [row['Rule']]
+                    inner_dict = result_dict[row['File']]
+                    inner_dict[row['Rule']] = True
+                    result_dict[row['File']] = inner_dict
                 else:
-                    result_dict[row['File']] = [row['Rule']]
+                    inner_dict = {}
+                    inner_dict[row['Rule']] = True
+                    result_dict[row['File']] = inner_dict
         
         numberOfFiles = 0
         for path, currentDirectory, files in os.walk(DirectoryPath):
@@ -34,9 +38,12 @@ def computeMetrics(DirectoryPath):
                     numberOfFiles+=1
                     filePath = os.path.join(path, file)
                     nvloc = SingleClassMesure.computenvloc(filePath)
-                   # cloc = SingleClassMesure.computecloc(filePath)
                     if filePath in result_dict:
-                        result_dict[filePath] = result_dict[filePath] + [nvloc]
+                        inner_dict = result_dict[filePath]
+                        inner_dict['nvloc'] = nvloc
+                        result_dict[filePath] = inner_dict
                     else:
-                        result_dict[filePath] = [nvloc]
+                        inner_dict = {}
+                        inner_dict['nvloc'] = nvloc
+                        result_dict[filePath] = inner_dict
         return (result_dict, numberOfFiles)
