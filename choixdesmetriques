@@ -3,7 +3,7 @@ Q1 : Le niveau de documentation des classes est-il approprié par rapport à leu
 Q2 : La conception est-elle bien modulaire ?
         Coupling Between Objects && God Class && nvloc
 Q3 : Le code est-il mature ?
-        date du premier commit && date du dernier commit && nombre de commits ( && peut-être nvloc)
+        date du premier commit && date du dernier commit && nombre de commits
 Q4 : Le code peut-il être testé bien automatiquement ?
         Coupling Between Objects && Ratio taille code / taille test (nvloc code/test)
 
