@@ -1,3 +1,5 @@
+Daudé Mondet Loïc - Alaa edlin Yacoub
+
 lien du git : https://github.com/IFT3913-TP/TP2/
 
 Prérequis:
